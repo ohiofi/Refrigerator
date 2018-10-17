@@ -28,7 +28,36 @@ public class Refrigerator
     exteriorColor = _exteriorColor;
     smell = _smell;
   }
-
+  
+  /**
+  * Creates a new default refrigerator with no parameters
+  */
+  public Refrigerator(){
+    isPluggedIn = true;
+    isDoorClosed = true;
+    isLightOn = false;
+    this.age = 0;
+    currentTemp = 35.0; // According to lifehacker.com, the ideal refrigerator temperature is 35° F
+    numberOfEggs = 0;
+    exteriorColor = "white";
+    smell = "good";
+  }
+ 
+  /**
+  * Change the temperature of the refrigerator
+  * @param _temp A double to set the temperature to
+  */
+  public void changeTemp(_temp){
+    currentTemp = _temp;
+  }
+  
+  /**
+  * Get the current temperature of the refrigerator
+  * @return currentTemp A double for the current temperature of the fridge
+  */
+  public double getTemp(){
+    return currentTemp;
+  }
 
 
 }
