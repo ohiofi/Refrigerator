@@ -43,6 +43,16 @@ public class Refrigerator
     smell = "good";
   }
  
+  public Refrigerator(){
+    isPluggedIn = true;
+    isDoorClosed = true;
+    isLightOn = false;
+    this.age = 0;
+    currentTemp = 35.0;
+    numberOfEggs = 0;
+    exteriorColor = "silver";
+    smell = "bad";
+  }
   /**
   * Change the temperature of the refrigerator
   * @param _temp A double to set the temperature to
@@ -59,5 +69,12 @@ public class Refrigerator
     return currentTemp;
   }
 
+  public void changeSmell(_smell1){
+    smell = _smell1;
+  }
 
+
+  public String getSmell(){
+    return smell;
+  }
 }
